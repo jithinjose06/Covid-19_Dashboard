@@ -32,6 +32,6 @@ This project has the following tech stack:
 <li>Run CoronaTrackerApplication</li>
 <li>Open a browser and use following URL: <a href="localhost:8080/home">localhost:8080/home</a></li>
 </ol>
-<img src="![alt text](http://url/to/img.png)
+<img src="![alt text](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/About.png)
 ">
 </div>
