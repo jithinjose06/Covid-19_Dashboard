@@ -15,13 +15,23 @@ This project has the following tech stack:
 
 </div>
 <div>
-<h3>Steps to run: </h3>
+<h3>Steps to run using terminal: </h3>
 <ol>
 <li>Install Maven</li>
 <li>Download the project file</li>
 <li>Open terminal</li>
 <li>cd into the project directory</li>
-<li>Type in th terminal: "mvn spring-boot:run "</li>
-<li>Open a browser and use following URL: <a href="localhost:8080/home"></a>localhost:8080/home</li>
+<li>Type in the terminal: "mvn spring-boot:run "</li>
+<li>Open a browser and use following URL: <a href="localhost:8080/home">localhost:8080/home</a></li>
 </ol>
+<h3>Steps to run using IntelliJ IDE: </h3>
+<ol>
+<li>Download the project file</li>
+<li>Open project file in IntelliJ</li>
+<li>Navigate to src/main/java/com.Project.CoronaTracker </li>
+<li>Run CoronaTrackerApplication</li>
+<li>Open a browser and use following URL: <a href="localhost:8080/home">localhost:8080/home</a></li>
+</ol>
+<img src="![alt text](http://url/to/img.png)
+">
 </div>
