@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.Project.CoronaTracker","l":"Corona"},{"p":"com.Project.CoronaTracker","l":"CoronaController"},{"p":"com.Project.CoronaTracker","l":"CoronaRepository"},{"p":"com.Project.CoronaTracker","l":"CoronaService"},{"p":"com.Project.CoronaTracker","l":"CoronaTrackerApplication"}]
