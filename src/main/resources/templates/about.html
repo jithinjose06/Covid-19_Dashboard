@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid Tracker</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+
+<style type="text/css">
+#main {
+     margin: 0;
+    padding: 10px;
+    border-sizing: border-box;
+}
+
+nav.nav-center ul {
+    text-align: center;
+}
+nav.nav-center ul li {
+    display: inline;
+    float: none;
+}
+nav.nav-center ul li a {
+    display: inline-block;
+}
+
+#card1.card {
+    width: 49%;
+    float: left;
+}
+#card1.card-content{
+    text-align: center;
+    font-weight: bold;
+    }
+
+#card2.card {
+    width: 49%;
+    float: right;
+}
+#card2.card-content{
+    text-align: center;
+    font-weight: bold;
+    }
+
+</style>
+
+</head>
+<body>
+<div class="cyan lighten-1">
+    <h4 id="main" class="center white-text">Covid-19 Dashboard</h4>
+</div>
+<nav class="nav-center" role="navigation">
+
+    <div class="nav-wrapper container">
+
+        <ul>
+            <li><a th:href="@{about}">About</a></li>
+            <li><a th:href="@{home}">Dashboard</a></li>
+            <li><a th:href="@{visual}">Visualization</a></li>
+        </ul>
+    </div>
+
+
+</nav>
+
+
+
+<!--<div class="row">-->
+<!--    <div class="col s12">-->
+<!--        <ul class="tabs">-->
+<!--            <li class="tab col s3"><a class="active cyan-text text-darken-3" href="#">Home</a></li>-->
+<!--            <li class="tab col s3"><a class="cyan-text text-darken-1" href="#visualization.html">Visualization</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="row">
+    <div class="col s12">
+        <div class="card cyan lighten-1">
+            <div class="card-content white-text">
+                <span class="card-title center">What ?</span>
+                <p>Coronavirus disease 2019 (COVID-19), also known as the coronavirus, or COVID, is a contagious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan, China, in December 2019. The disease has since spread worldwide, leading to an ongoing pandemic.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col s12 ">
+        <div class="card red lighten-2">
+            <div class="card-content white-text">
+                <span class="card-title center">Why ?</span>
+                <p>Accurate, timely data is a key tool in states’ efforts to understand and respond to the impact of the coronavirus (COVID-19) outbreak. There have also been increasing calls to further break down COVID-10 data into subcategories (such as by gender, age, and race and ethnicity) in order to track the impact of the disease on specific populations. These dashboards are designed to organize complex data in an easy-to-digest visual format, allowing the audience to easily interpret key trends and patterns at a glance </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s5 m12">
+        <div class="card cyan lighten-1" id="card1">
+            <div class="card-content white-text">
+                <span class="card-title center">How ?</span>
+                <p>This project is aimed at developing a dashboard web application which displays statistics related to Covid-19. </p>
+            </div>
+        </div>
+        <div class="card cyan lighten-1" id="card2">
+            <div class="card-content white-text">
+                <span class="card-title center">Dataset</span>
+                <p>The dataset is operated by the Johns Hopkins University, Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).  </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
