@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
+/**
+ Store the required data from the dataset using getters and setters
+ */
 @Getter
 @Setter
 @AllArgsConstructor

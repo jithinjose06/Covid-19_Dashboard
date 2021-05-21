@@ -23,6 +23,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
+/**
+ * This class provides methods for populating the database and accessing it.
+*/
+
 @Slf4j
 @Service
 public class CoronaService {
@@ -31,7 +35,10 @@ public class CoronaService {
     public CoronaService(CoronaRepository coronaRepository) {
         this.coronaRepository = coronaRepository;
     }
-
+/**
+* This method is used to store records in the table
+* @param corona object of Corona class which contains all details(deaths,confirmed,active,etc.) about the records
+ */
     public void save(Corona corona)
     {
         coronaRepository.save(corona);
@@ -40,11 +47,16 @@ public class CoronaService {
     private LocalDateTime localDateTime;
 
 
-
-    @Scheduled(cron = "0 40 18 * * *",zone="America/New_York")
+/**
+ *  This method runs everyday at 6:30 AM to populate the database with latest data.
+ */
+    @Scheduled(cron = "0 30 06 * * *",zone="America/New_York")
     public void populateDatabase(){
         localDateTime = LocalDateTime.now();
         log.info("Executed now: "+ localDateTime.toString());
+
+        // Checks if table in database is empty
+        // If not empty, clears the table and populates it with new data
         if(checkEmpty()==0)
             log.info("Empty Table");
         else {
@@ -54,6 +66,7 @@ public class CoronaService {
 
         URL url = null;
 
+        // Get recent date, append it to URL and establish a connection
         String pattern = "MM-dd-yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         Date date = Date.from(Instant.now().minus(Duration.ofDays(1)));
@@ -79,7 +92,7 @@ public class CoronaService {
             e.printStackTrace();
         }
 
-
+        // On successful connection, read records line by line, store records in a table
         if(responseCode==200)
         {
             log.info("-- Successful Connection");
@@ -114,8 +127,7 @@ public class CoronaService {
                         line[5]="0";
                     if(line[6].equals(""))
                         line[6]="0";
-//                    if(line[3].equals(""))
-//                        line[]="0";
+
                     try {
 
                         corona.setConfirmed(Long.valueOf(line[7]));
@@ -155,13 +167,13 @@ public class CoronaService {
                 }
             }
         }
-
-        executePython();
     }
 
 
 
-
+/**
+* Method to execute python script for visualization of data
+ */
     public void executePython()
     {
 
@@ -173,25 +185,22 @@ public class CoronaService {
         }
     }
 
-
-    private List<Corona> findByCombinedKey(String combinedKey) {
-        return coronaRepository.findByCombinedKey(combinedKey);
-    }
-
-    public List<Corona> findByLastUpdate(LocalDate localDate)
-    {
-        return coronaRepository.findByLastUpdateBetween(LocalDateTime.of(localDate, LocalTime.MIN),LocalDateTime.of(localDate, LocalTime.MAX));
-    }
-
+    /**
+    * Method to get all records in the table
+     */
     public List<Corona> findAll() {
         return coronaRepository.findAll();
     }
-
+/**
+* Method to check if table is empty
+ */
     public Integer checkEmpty()
     {
         return coronaRepository.checkEmptyTable();
     }
-
+/**
+* Method to delete all records in a table
+ */
     public void deleteTableRecords()
     {
         coronaRepository.deleteAll();

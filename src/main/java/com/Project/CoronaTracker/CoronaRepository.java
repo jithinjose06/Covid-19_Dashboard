@@ -8,12 +8,16 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * repository class which extends JpaRepository
+ */
 @Repository
 public interface CoronaRepository extends JpaRepository<Corona,Long> {
-    List<Corona> findByLastUpdateBetween(LocalDateTime from, LocalDateTime to);
 
-    List<Corona> findByCombinedKey(String combinedKey);
-
+    /**
+     * Method to check if table is empty
+     * @return integer representing table is empty or not. 0 - Empty table, 1 - Non-Empty table
+     */
     @Query(value = "SELECT EXISTS(SELECT 1 FROM Corona)",nativeQuery = true)
     Integer checkEmptyTable();
 
