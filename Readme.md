@@ -34,8 +34,24 @@ This project has the following tech stack:
 </ol>
 
 </div>
+
+<h2>Screenshots:</h2>
+
 <h3>About Page:</h3>
 ![about](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/About.png)
 
 <h3>Dashboard Page:</h3>
+
 ![dashboard](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Dashboard.png)
+<br>
+![dashboard_filter](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Dashboar_filter.png)
+<br>
+![dashboard_pagination](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Dashboard_pagination.png)
+<h3>Visualization Page:</h3>
+![visual_1](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Visual_1.png)
+<br>
+![visual_2](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Visual_2.png)
+<br>
+![visual_3](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Visual_3.png)
+<br>
+![visual_4](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Visual_4.png)
