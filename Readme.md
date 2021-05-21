@@ -34,6 +34,8 @@ This project has the following tech stack:
 </ol>
 
 </div>
+<h3>About Page:</h3>
+![about](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/About.png)
 
-![alt text](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/About.png)
-
+<h3>Dashboard Page:</h3>
+![dashboard](https://github.com/jithinjose06/Covid-19_Dashboard/blob/master/Screenshots/Dashboard.png)
